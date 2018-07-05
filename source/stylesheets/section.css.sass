@@ -1,0 +1,395 @@
+@import './mobile.css.sass'
+=from($device)
+  @media screen and (min-width: $device)
+    @content
+
+$title-color: #7CEEF0
+$c-orange: #EC744D
+  
+.section-page
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 380px
+  +from($iphone-plus)
+    min-height: 100vh
+
+.bg-image
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  &.home
+    background-image: url(../images/bg-img.png)
+    +from($ipad)
+      background-image: url(../images/home-bg-img.jpg)
+  
+  &.vision
+    background-image: url(../images/vision-img.png)
+    +from($ipad)
+      background-image: url(../images/vision-img-desktop.png)
+  
+  &.connect
+    background-image: url(../images/connect-image.png)
+    +from($ipad)
+      background-image: url(../images/connect-image-desktop.png)
+    .title-block 
+      margin-top: 0
+    .logo
+      width: 280px
+
+  &.ICs
+    background-image: url(../images/ics-img.png)
+    +from($ipad)
+      background-image: url(../images/ics-img-desktop.png)
+  
+.title-block
+  text-align: center
+  margin-top: 4rem
+
+  .logo
+    margin-bottom: 1.5rem
+    +from($ipad)
+      width: 200px
+
+  .title
+    height: 1px
+    width: 1px
+    position: absolute
+    overflow: hidden
+    padding: 0
+    border: 0
+  
+  .subtitle
+    color: #fff
+
+    &.is-6 
+      line-height: 1.5rem
+    
+    &.is-5 
+      margin: 0 3rem
+  
+.bg-color 
+  &.technology
+    background: linear-gradient(rgba(51,23,56,100),rgba(0,38,75,100))
+  
+  &.products
+    background: #02264B
+    padding: 2rem 0 0 0 
+    position: relative
+    +from($iphone-plus)
+      background: linear-gradient(to bottom right,rgba(0,38,75,100),rgba(51,23,56,100))
+
+  &.about
+    background: $c-orange
+
+.inner
+  text-align: center
+  margin-bottom: 2rem
+  padding: 2rem
+  
+  &.products
+    position: relative
+    z-index: 2
+
+  .title
+    text-align: center
+    color: $title-color
+    font-size: 1.25rem
+    font-weight: 400
+
+    &.technology
+      margin-top: 3rem
+      font-size: 1.25rem
+      padding: 0 1rem
+      +from($iphone)
+        padding: 0 3rem
+
+    &.about
+      color: #fff
+      font-size: 2rem
+      margin-top: 3rem
+
+      &.sales-partners
+        padding: 0 2rem
+
+    &.products
+      display: none
+      +from($iphone-plus)
+        display: block
+        color: $title-color
+        margin-top: 4rem
+
+  .content
+    text-align: center
+    color: #fff
+
+    +from($ipad)
+      width: 500px
+
+    p:not(:last-child)
+      margin-bottom: 1.5rem
+
+    &.about
+      text-align: justify
+      margin-bottom: 2.5rem
+
+
+.image-container
+  border: 1px solid #fff
+  border-radius: 25px
+  width: 16rem
+  overflow: hidden
+  margin-bottom: 1rem
+  transition: all 0.3s
+  +from($ipad)
+    margin: 0 1rem
+
+    &:hover
+      -webkit-box-shadow: 1px 0px 36px 10px rgba(0,0,0,0.75)
+      -moz-box-shadow: 1px 0px 36px 10px rgba(0,0,0,0.75)
+      box-shadow: 1px 0px 36px 10px rgba(0,0,0,0.75)
+      transform: scale(1.2)
+
+  .image-inner
+    display: flex 
+    justify-content: center
+    align-items: center
+    height: 127px
+
+    &.up 
+      background-color: #fff
+      width: 100%
+  
+    &.down
+      color: #fff
+      font-size: 0.8rem
+      padding: 0 1rem
+
+.subtitle-box
+  text-align: left
+  margin: 3.5rem 1rem 1rem 1rem
+
+  .ics
+    text-align: left
+    font-size: 1.5rem
+    color: $title-color
+    margin-bottom: 1rem
+    +from($iphone-plus)
+      color: #fff
+
+  .photodectors
+    text-align: left
+    font-size: 1.5rem
+    color: #fff
+    margin-bottom: 1rem
+
+=keyframes($breath)
+  @-webkit-keyframes "#{$breath}"
+    @content
+  @-moz-keyframes "#{$breath}"
+    @content
+  @-ms-keyframes "#{$breath}"
+    @content
+  @keyframes "#{$breath}"
+    @content
+
+.scrolldown-btn
+  +from($iphone-plus)
+    width: 32px
+    height: 32px
+    position: absolute
+    bottom: 32px
+    left: 50%
+    transform: translateX(-50%)
+    animation: breath 2s infinite
+    border: 1px solid #fff
+    border-radius: 50%
+    cursor: pointer
+    +keyframes(breath)
+      0%  
+        opacity: 0.5
+      50% 
+        opacity: 1
+      100%  
+        opacity: 0.5
+
+  .arrow
+    position: absolute
+    transform: translateX(-50%)
+    top: -60%
+    left: 50%
+
+.image-box
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  +from($ipad)
+    flex-direction: row
+
+.product-unit
+  width: 100%
+  height: 16rem
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  padding: 3rem 0
+  transition: all 0.3s
+  margin-bottom: 1rem
+  +from($ipad)
+    margin: 0 1rem
+
+    &:hover
+      -webkit-box-shadow: 1px 0px 36px 10px rgba(0,0,0,0.75)
+      -moz-box-shadow: 1px 0px 36px 10px rgba(0,0,0,0.75)
+      box-shadow: 1px 0px 36px 10px rgba(0,0,0,0.75)
+      transform: scale(1.2)
+      transform: scale(1.2)
+
+  .product-icon
+    margin-bottom: 1rem
+
+  .product-title
+    color: #fff
+    font-size: 1.2rem
+
+  .product-description
+    color: #fff
+    font-size: 0.8rem
+    margin-bottom: 1rem
+    height: 2rem
+    &.explore
+      margin-bottom: 2rem
+
+  .button
+    border-radius: 25px
+    background-color: inherit
+    color: #fff
+    transition: all 0.3s
+
+    &:hover
+      color: #000
+      background-color: #fff
+
+.app-container
+  display: flex
+  flex-direction: column 
+  justify-content: center
+  align-items: center
+  +from($iphone-plus)
+    flex-direction: row
+
+  .app-box
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    margin-bottom: 2rem
+
+    .app-unit
+      display: flex
+      flex-grow: 1
+      flex-direction: column
+      width: 50%
+
+      .app-icon
+        margin-bottom: 0.5rem
+
+        .app-image
+          transition: all 0.3s
+          border-radius: 50%
+
+          &:hover
+            -webkit-box-shadow: 1px 2px 23px 1px rgba(0,0,0,0.75)
+            -moz-box-shadow: 1px 2px 23px 1px rgba(0,0,0,0.75)
+            box-shadow: 1px 2px 23px 1px rgba(0,0,0,0.75)
+
+      .app-word
+        color: #fff
+        height: 3rem
+        font-size: 0.9rem
+
+.product-box
+  .title
+    text-align: left
+    font-size: 1.5rem
+
+  .content
+    text-align: left
+    font-size: 0.9rem
+
+  .field
+    margin-bottom: 3rem
+    
+    .label
+      color: #fff
+      text-align: left
+    
+    .control
+      margin-bottom: 1rem
+
+      .select
+        width: 100%
+        &:hover
+          > select
+            color: #000
+            background-color: #fff
+          &:after
+            border-color: #000 !important
+
+      .select select
+        background-color: inherit
+        color: #fff
+        width: 100%
+        border-radius: 8px
+        transition: all 0.3s
+          
+      .select:not(.is-multiple):not(.is-loading)::after
+        border-color: #fff
+
+.technology-img
+  background-image: url(../images/tech-img.svg)
+  background-size: contain
+  height: 18rem
+  position: relative
+  +from($iphone-plus)
+    height: 24rem
+
+  .patents-box
+    position: absolute
+    left: 37%
+    top: 44%
+    color: #F51A59
+    font-weight: 200
+    +from($iphone-plus)
+      top: 50%
+      left: 43%
+
+    .patents-up
+      font-size: 2.5rem
+      line-height: 3rem
+
+.background 
+  position: absolute
+  display: block
+  top: 0
+  left: 0
+  z-index: 0
+  height: 100%
+  width: 100%
+  opacity: 0.5
+
+html,body 
+  margin: 0
+  padding: 0
+
+
+
+
+
+
+
+
+

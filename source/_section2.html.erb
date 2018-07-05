@@ -1,0 +1,139 @@
+<div  id="home" class="section-page bg-image connect">
+  <div class="title-block">
+    <h1 class="title">Connect</h1>
+    <img class="logo" src="../images/connect-logo.svg">
+    <h1 class="subtitle is-5">ubiquitous ultra-high speed optical solutions</h1>
+  </div>
+  <a class="scrolldown-btn" data-scroll-to="#about">
+    <img class="arrow" src="../images/scrolldown-btn.svg">
+  </a>
+</div>
+<div id="about" class="section-page bg-color about">
+  <div class="inner">
+    <h1 class="title about">ABOUT</h1>
+    <div class="content about">
+      <% data.about.about.each do |about| %>
+        <p> <%= about.content %> </p>
+      <% end%>
+    </div>
+    <div class="app-container">
+      <div class="app-box">
+        <% data.about.about.each do |about| %>
+          <div class="app-unit">
+            <div class="app-icon">
+              <img src="../images/<%= about.icon %>" class="app-image">
+            </div>
+            <div class="app-word">
+              <p><%= about.word %></p>
+            </div>
+          </div>
+        <% end%>
+      </div>
+      <div class="app-box">
+        <% data.about.about2.each do |about| %>
+          <div class="app-unit">
+            <div class="app-icon">
+              <img src="../images/<%= about.icon %>" class="app-image">
+            </div>
+            <div class="app-word">
+              <p><%= about.word %></p>
+            </div>
+          </div>
+        <% end%>
+      </div>
+      <div class="app-box">
+        <% data.about.about3.each do |about| %>
+          <div class="app-unit">
+            <div class="app-icon">
+              <img src="../images/<%= about.icon %>" class="app-image">
+            </div>
+            <div class="app-word">
+              <p><%= about.word %></p>
+            </div>
+          </div>
+        <% end%>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="products" class="section-page bg-image ICs">
+  <div class="inner">
+    <h1 class="title about products">PRODUCTS</h1>
+    <div class="product-box">
+      <h2 class="title">ICs</h2>
+      <p class="content">Chip on Board VCSEL Driver / TIA CMOS Solutions</p>
+      <div class="field">
+        <% data.ics.ics.each do |ics| %>
+          <label class="label"><%= ics.people%></label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option><%= ics.option1%></option>
+                </select>
+              </div>
+            </div>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option><%= ics.option2%></option>
+                </select>
+              </div>
+            </div>
+        <% end%>
+      </div>
+    </div>
+    <div class="product-box">
+      <h2 class="title">Photodectors</h2>
+      <p class="content">High Responsivity / High Reliability / On-demand Array Configuration</p>
+      <div class="field">
+        <% data.ics.ics2.each do |ics| %>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option><%= ics.option1%></option>
+              </select>
+            </div>
+          </div>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option><%= ics.option2%></option>
+              </select>
+            </div>
+          </div>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option><%= ics.option3%></option>
+              </select>
+            </div>
+          </div>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option><%= ics.option4%></option>
+              </select>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="sale-partners" class="section-page bg-color about">
+  <div class="inner">
+    <h1 class="title about sales-partners">SALES PARTNERS</h1>
+    <div class="image-box">
+      <% data.sales.sales.each do |sales| %>
+      <div class="image-container">
+        <a class="image-inner up" href="#">
+          <img " src="../images/<%= sales.logo%>">
+        </a>
+        <div class="image-inner down">
+          <p><%= sales.address%></p>
+        </div>
+      </div>
+    <% end%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div id="home" class="section-page bg-image home">
+  <div class="title-block">
+    <h1 class="title">Artilux</h1>
+    <img class="logo" src="../images/logo-img-2.svg">
+    <h1 class="subtitle is-6">enlighten the path from<br>information to intelligence</h1>
+  </div>
+  <a class="scrolldown-btn" data-scroll-to="#technology">
+    <img class="arrow" src="../images/scrolldown-btn.svg">
+  </a>
+</div>
+<div id="technology" class="section-page bg-color technology">
+  <div class="inner">
+    <h1 class="title technology">FULL-STACT TECHNOLOGY SYNERGY</h1>
+    <div class="technology-img bg-image">
+      <div class="patents-box">
+        <div class="patents-up">
+          <% data.tech.tech.each do |tech| %>
+            <span data-number="<%= tech.number %>" id="counter">50</span>
+          <% end%>
+          <span class="patents-plus">+</span>
+        </div>
+        <div class="patents-down">PATENTS</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="vision" class="section-page bg-image vision">
+  <div class="inner">
+    <h1 class="title vision">VISION</h1>
+    <div class="content">
+      <% data.vision.vision.each do |vision| %>
+        <p> <%= vision.paragraph_1 %> </p>
+        <p> <%= vision.paragraph_2 %> </p>
+        <p> <%= vision.paragraph_3 %> </p>
+      <% end%>
+    </div>
+  </div>
+</div>
+<div id="products" class="section-page bg-color products">
+  <canvas class="background"></canvas>
+  <div class="inner products">
+    <h1 class="title">PRODUCTS</h1>
+    <div class="image-box">
+      <% data.products.products.each do |product| %>
+        <div class="product-unit" style="background-image: url('<%= product.background_image %>');">
+          <img class="product-icon" src="../images/<%= product.icon%>">
+          <h2 class="product-title">
+            <%= product.title %>
+          </h2>
+          <p class="product-description"> <%= product.description %> </p>
+          <a class="button" href="<%= product.link %>" target="_blank">
+            <%= product.button %>
+          </a>
+        </div>
+      <% end%>
+    </div>
+  </div>
+</div>

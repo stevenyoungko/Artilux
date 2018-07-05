@@ -1,0 +1,18 @@
+about:
+  - content: Artliux-Connect provides complete IC solutions featuring high performance with modest cost for various optical connectivity applications. Our product portfolios cover short range 10-40G consumer usages,to long range 100G data center links. Our mission is to embed advanced optical and RF technology into every wire to enable seamless and instant data trnasfer in our living room or up to the cloud.  
+    icon: 'datacenter.svg'
+    word: 'Data Center'
+  - icon: '5g.svg'
+    word: '5G'
+
+about2:
+  - icon: 'vr.svg'
+    word: 'VR/AR'
+  - icon: 'video.svg'
+    word: 'Video/Media'
+
+about3:
+  - icon: 'consumer.svg'
+    word: 'Consumer'
+  - icon: 'autonomous.svg'
+    word: 'Autonomous Driving'

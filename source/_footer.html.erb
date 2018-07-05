@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="footer-page" id="contact-us">
+    <div class="title-block">
+      <h1 class="title">Artilux</h1>
+      <img class="footer-logo" src="../images/logo-img.svg">
+      <h1 class="subtitle is-6">enlighten the path from information to intelligence</h1>
+    </div>
+    <div class="wrapper">
+      <div class="inner follow-us">
+        <h1 class="title is-5">FOLLOW US</h1>
+        <a href="mailto:info@artiluxtech.com" class="e-mail">info@artiluxtech.com</a>
+        <div class="icon-box">
+        <a herf="#" target="_blank"><i class="icon first"></i></a>
+        <a herf="#" target="_blank"><i class="icon second"></i></a>
+        </div>
+      </div>
+      <div class="inner border-left">
+        <h1 class="title is-5">COMPANY ADDRESS</h1>
+          <div class="list">
+            <% data.footer.footer.each do |footer| %>
+              <div class="unit">
+                <div class="item"> <%= footer.country %> </div>
+                <div class="item"> <%= footer.address %> </div>
+                <div class="item"> <%= footer.city %> </div>
+                <div class="item"> ZIP:<%= footer.zip1 %> </div>
+              </div>
+            <% end%>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">Copyright Ⓒ 2018 ARTILUX All Rights Reserved</div>
+</footer>

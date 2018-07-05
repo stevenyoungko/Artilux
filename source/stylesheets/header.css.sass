@@ -1,0 +1,122 @@
+@import './mobile.css.sass'
+=from($device)
+  @media screen and (min-width: $device)
+    @content
+
+.header
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+
+  .navbar
+    background-color: #00234E
+
+  .navbar-brand 
+    +from($ipad-pro) 
+      min-height: 4.25rem
+      padding-left: 3rem
+
+    .navbar-burger
+      margin-left: 0
+      color: #fff
+
+      .first 
+        width: 20px
+      .second
+        width: 12px
+      &.is-active
+        .third
+          width: 20px
+
+    .navbar-item 
+      width: 83%
+      justify-content: center
+      padding-right: 4rem
+      +from($iphone-plus) 
+        width: 90%
+
+      .logo
+        height: 1.5rem
+        +from($ipad-pro)
+          height: 2.5rem
+
+  .navbar-menu 
+    +from($ipad-pro) 
+      padding-left: 18rem
+    +from($ipad-pro-horizontal) 
+      padding-left: 24rem
+
+    .navbar-item
+      +from($ipad-pro) 
+        color: #fff
+        padding: 0.5rem 1.5rem
+
+      &::after 
+        content: ""
+        position: absolute
+        background-color: #479AAD
+        height: 3px
+        width: 0
+        bottom: 5px
+        transition: all 0.5s
+        transform: translateX(-50%)
+        left: 50%
+
+      &:hover 
+        background-color: #00234E
+        &::after
+          width: 80%
+
+.popup-menu
+  position: fixed
+  top: 0
+  left: -100%
+  width: 100%
+  height: 100%
+  background-color: #EDAB00
+  transition: all 0.3s
+  opacity: 0.9
+  visibility: visible
+
+  .popup-menu-list
+    padding: 2rem
+    +from($iphone-se)
+      padding-left: 4rem
+
+    .popup-menu-item
+      color: #fff
+      font-size: 1.5rem
+      margin-bottom: 2rem
+      height: 3rem
+      display: flex
+      justify-content: center
+      align-items: center
+
+      &.is-active
+        color: #000
+        background-color: #EC744D
+
+.popup-menu-close
+  cursor: pointer
+  width: 3.25rem
+  height: 3.25rem
+  transition: all 0.3s
+  position: relative
+
+  &:hover
+    transform: rotate(180deg)
+
+  span
+    width: 1.5rem
+    height: 2px
+    background-color: #fff
+    position: absolute
+    top: 50%
+    left: 50%
+
+  span:nth-child(1)
+    transform: translate(-50%,-50%) rotate(45deg)
+
+  span:nth-child(2)
+    transform: translate(-50%,-50%) rotate(-45deg)

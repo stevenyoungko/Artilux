@@ -1,0 +1,14 @@
+ics:
+  - people: 'Transmitter:'
+    option1: 10G
+    option2: 100G
+  - people: 'Receiver:'
+    option1: 10G
+    option2: 100G
+
+ics2:
+  - option1: 10G
+    option2: 25G
+    option3: 40G
+    option4: 100G
+
