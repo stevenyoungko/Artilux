@@ -225,7 +225,7 @@ $c-orange: #EC744D
   justify-content: center
   align-items: center
   flex-direction: column
-  +from($ipad)
+  +from($iphone-plus)
     flex-direction: row
 
 .product-unit
@@ -237,7 +237,7 @@ $c-orange: #EC744D
   padding: 3rem 0
   transition: all 0.3s
   margin-bottom: 1rem
-  +from($ipad)
+  +from($iphone-plus)
     margin: 0 1rem
 
     &:hover
@@ -373,13 +373,15 @@ $c-orange: #EC744D
 
 .background 
   position: absolute
-  display: block
+  display: none
   top: 0
   left: 0
   z-index: 0
   height: 100%
   width: 100%
   opacity: 0.5
+  +from($ipad)
+    display: block
 
 html,body 
   margin: 0

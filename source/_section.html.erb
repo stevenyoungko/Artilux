@@ -28,11 +28,7 @@
   <div class="inner">
     <h1 class="title vision">VISION</h1>
     <div class="content">
-      <% data.vision.vision.each do |vision| %>
-        <p> <%= vision.paragraph_1 %> </p>
-        <p> <%= vision.paragraph_2 %> </p>
-        <p> <%= vision.paragraph_3 %> </p>
-      <% end%>
+      <%= simple_format data.vision.vision.content %>
     </div>
   </div>
 </div>

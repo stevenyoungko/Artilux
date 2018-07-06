@@ -27,6 +27,7 @@
       <% data.navbar2.links.each do |link| %>
         <a class="navbar-item" data-scroll-to="<%= link.target %>" herf="<%= link.path %>">
           <%= link.name %>
+          <div class="line"></div>
         </a>
       <% end%>
     </div>
