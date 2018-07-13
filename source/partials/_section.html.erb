@@ -5,7 +5,7 @@
     <h1 class="subtitle is-6">enlighten the path from<br>information to intelligence</h1>
   </div>
   <a class="scrolldown-btn" data-scroll-to="#technology">
-    <img class="arrow" src="../images/scrolldown-btn.svg">
+    <%= image_tag 'scrolldown-btn.svg', class: 'arrow' %>
   </a>
 </div>
 <div id="technology" class="section-page bg-color technology">
@@ -38,16 +38,7 @@
     <h1 class="title">PRODUCTS</h1>
     <div class="image-box">
       <% data.products.products.each do |product| %>
-        <div class="product-unit" style="background-image: url('<%= product.background_image %>');">
-          <img class="product-icon" src="../images/<%= product.icon%>">
-          <h2 class="product-title">
-            <%= product.title %>
-          </h2>
-          <p class="product-description"> <%= product.description %> </p>
-          <a class="button" href="<%= product.link %>" target="_blank">
-            <%= product.button %>
-          </a>
-        </div>
+        <%= partial 'partials/product_unit', locals: { product: product } %>
       <% end%>
     </div>
   </div>

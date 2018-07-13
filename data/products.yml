@@ -2,13 +2,13 @@ products:
   - title: CONNECT
     description: ubiquitous ultra-high speed optical solutions
     icon: 'connect-icon.png'
-    background_image: '../images/connect-product.png'
-    link: '/index2.html'
+    background_image: './images/connect-product.png'
+    link: 'products/index.html'
     button: Discover More
   - title: EXPLORE
     description: new intelligence with new dimensions
     icon: 'explore-icon.png'
-    background_image: '../images/explore-product.png'
+    background_image: './images/explore-product.png'
     link: '#'
     button: Coming Soon
   

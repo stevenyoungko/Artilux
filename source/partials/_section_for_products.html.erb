@@ -1,11 +1,11 @@
 <div  id="home" class="section-page bg-image connect">
   <div class="title-block">
     <h1 class="title">Connect</h1>
-    <img class="logo" src="../images/connect-logo.svg">
+    <%= image_tag 'connect-logo.svg', class: 'logo' %>
     <h1 class="subtitle is-5">ubiquitous ultra-high speed optical solutions</h1>
   </div>
   <a class="scrolldown-btn" data-scroll-to="#about">
-    <img class="arrow" src="../images/scrolldown-btn.svg">
+    <%= image_tag 'scrolldown-btn.svg', class: 'arrow' %>
   </a>
 </div>
 <div id="about" class="section-page bg-color about">
@@ -127,7 +127,7 @@
       <% data.sales.sales.each do |sales| %>
       <div class="image-container">
         <a class="image-inner up" href="#">
-          <img " src="../images/<%= sales.logo%>">
+          <img " src="../images/<%= sales.logo %>">
         </a>
         <div class="image-inner down">
           <p><%= sales.address%></p>
