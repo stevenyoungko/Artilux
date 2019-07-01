@@ -7,6 +7,7 @@ var initSmoothScrollTo = function() {
     element.addEventListener('click', event => {
       var target = event.currentTarget.dataset.scrollTo;
       var offset = document.querySelector(target).offsetTop;
+      console.log(event.currentTarget.dataset.scrollTo)
 
       window.scroll({
         top: offset,
