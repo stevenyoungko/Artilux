@@ -7,7 +7,7 @@ var initSmoothScrollTo = function() {
     element.addEventListener('click', event => {
       var target = event.currentTarget.dataset.scrollTo;
       var offset = document.querySelector(target).offsetTop;
-      console.log(event.currentTarget.dataset.scrollTo)
+
 
       window.scroll({
         top: offset,
@@ -147,110 +147,6 @@ $(function () {
   particlesEffective()
   navMenuOnSrollEffective()
 })
-
-// var patentsCountUp = function() {
-//   var button = $('.popup-menu-item')
-//   button.on('click', function (event) {
-//     var numAnim = new CountUp("counter", 0, 50);
-//     if (!numAnim.error) {
-//       numAnim.start();
-//     } else {
-//       console.error(numAnim.error);
-//     }
-//   })
-// }
-
-// var $target = $('.navbar-item')
-// $target.on('click',function() {
-//   $('.navbar-item div').removeClass('active')
-//   $(this).find('.line').addClass('active')
-// })
-
-// $(function() {
-//   $(window).on('scroll', function () {
-//     var scrollDistance = $(window).scrollTop();
-//     console.log(scrollDistance)
-//     if (scrollDistance > 40) {
-//       var numAnim = new CountUp("counter", 0, 50);
-//       if (!numAnim.error) {
-//         numAnim.start();
-//       } else {
-//         console.error(numAnim.error);
-//       }
-//     }
-//   })
-// })
-
-
-// $(window).on('resize scroll', function() {
-//   if ($('.section-page').isInViewport()) {
-//     $('.navbar-menu a').removeClass('active')
-//     $('.navbar-item').addClass('active')
-//   }
-// })
-
-// var homeLine = $('[data-scroll-to="#home"]').find($('.line'))
-// var technologyLine = $('[data-scroll-to="#technology"]').find($('.line'))
-// var visionLine = $('[data-scroll-to="#vision"]').find($('.line'))
-// var productLine = $('[data-scroll-to="#products"]').find($('.line'))
-// var contactLine = $('[data-scroll-to="#contact-us"]').find($('.line'))
-// var home = $('#home')
-// var technology = $('#technology')
-// var vision = $('#vision')
-// var product = $('#products')
-// var contact = $('#contact-us')
-// $(window).on('scroll', function () {
-//   var header = $('.header').outerHeight()
-//   var scrollDistance = $(window).scrollTop() + header
-//   var homeHeight = home.outerHeight()
-//   var technologyTop = technology.offset().top
-//   var visionTop = technologyTop + technology.outerHeight() 
-//   var productTop = visionTop + vision.outerHeight()
-//   var contactTop = productTop + product.outerHeight() 
-
-//   if (header <= scrollDistance) {
-//     homeLine.addClass('active')
-//   }
-
-//   if (homeHeight <= scrollDistance) {
-//     homeLine.removeClass('active')
-//   }
-  
-//   if (technologyTop <= scrollDistance) {
-//     technologyLine.addClass('active')
-//   }
-
-//   if (visionTop <= scrollDistance) {
-//     technologyLine.removeClass('active')
-//     visionLine.addClass('active')
-//   }
-
-//   if (scrollDistance <= technologyTop) {
-//     technologyLine.removeClass('active')
-//   }
-
-//   if (productTop <= scrollDistance) {
-//     visionLine.removeClass('active')
-//     productLine.addClass('active')
-//   }
-
-//   if (scrollDistance <= visionTop) {
-//     visionLine.removeClass('active')
-//   }
-
-//   if (scrollDistance <= productTop) {
-//     productLine.removeClass('active')
-//   }
-
-//   if (scrollDistance <= contactTop) {
-//     contactLine.removeClass('active')
-//   }
-
-//   if (contactTop <= scrollDistance) {
-//     productLine.removeClass('active')
-//     contactLine.addClass('active')
-//   }
-// })
 
 
 
