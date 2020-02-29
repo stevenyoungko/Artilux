@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/porada/middleman-autoprefixer.git
+  remote: https://github.com/porada/middleman-autoprefixer.git
   revision: 2d2b849f696b3a0214bb92f6c6f119c013e5bc21
   specs:
     middleman-autoprefixer (2.10.1)
@@ -16,7 +16,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (9.6.0)
+    autoprefixer-rails (9.7.4)
       execjs
     backports (3.11.4)
     coffee-script (2.4.1)
@@ -85,7 +85,7 @@ GEM
     parallel (1.12.1)
     public_suffix (3.0.3)
     rack (2.0.6)
-    rake (12.3.2)
+    rake (13.0.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
